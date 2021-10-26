@@ -1,2 +1,2 @@
 # FE-DailyQuestion
-前端每日一题
+前端每天一个知识点
