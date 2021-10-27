@@ -8,34 +8,34 @@
 
 //ES5
 
-// // 定义父类
-// function Super(name,age){
-//     this.name=name;
-//     this.age=age;
-// }
-// Super.prototype.sayName=function(){
-//     return this.name;
-// }
-// // 定义属性
-// Super.num=1;
-// // 定义静态属性
-// Super.sayWord=function(word){
-//     return word;
-// }
+// 定义父类
+function Super(name,age){
+    this.name=name;
+    this.age=age;
+}
+Super.prototype.sayName=function(){
+    return this.name;
+}
+// 定义属性
+Super.num=1;
+// 定义静态属性
+Super.sayWord=function(word){
+    return word;
+}
 
-// // 定义子类
-// function Sub(name,age,sex){
-//     Super.call(this,name,age);
-//     this.sex=sex;
-// }
-// Sub.prototype=Object.create(Super.prototype);
-// Sub.prototype.constructor=Sub;
+// 定义子类
+function Sub(name,age,sex){
+    Super.call(this,name,age);
+    this.sex=sex;
+}
+Sub.prototype=Object.create(Super.prototype);
+Sub.prototype.constructor=Sub;
 
-// var instance = new Sub('张三', '18', '男');
+var instance = new Sub('张三', '18', '男');
 
-// console.log(Super.sayWord('hello world'));   //hello world
-// console.log(Sub.sayWord('hello world'));     //Sub.sayWord is not a function
-// console.log(instance.sayWord('hello world'));   //instance.sayWord is not a function
+console.log(Super.sayWord('hello world'));   //hello world
+console.log(Sub.sayWord('hello world'));     //Sub.sayWord is not a function
+console.log(instance.sayWord('hello world'));   //instance.sayWord is not a function
 
 
 //ES6

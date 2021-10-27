@@ -18,4 +18,5 @@ console.log(typeof(Function.prototype));      //function
  *   的属性及方法，如：length、call、apply、bind
  * 2.Function.prototype.__proto__===Object.prototype  //true
  * 3.所有对象的__proto__都指向其构造函数的prototype
+ * 4.箭头函数的__proto__也是指向Function.prototype(箭头函数没有原型，所以不能用做构造函数进行实例化)
  */
